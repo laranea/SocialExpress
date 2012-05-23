@@ -11,7 +11,7 @@ import webbrowser
 
 # Query terms
 
-Q = ['vodafone']
+Q = ['twitter']
 
 # Get these values from your application settings
 

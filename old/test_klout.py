@@ -26,6 +26,7 @@ class TestKlout(unittest.TestCase):
         data = api.identity('marcelcaraciolo', 'twitter')
         user_id = data['id']
         data = api.score(user_id)
+        print data['score']
         self.assert_(data['score'] < 100.0  and data['score'] > 0.0)
 
     def test_influences(self):

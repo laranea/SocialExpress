@@ -19,14 +19,11 @@ class Influence():
             Returns the klout influence of the val, which is a string (screen_name)
         """
         api = Klout(general_settings.KLOUT_KEY)
-        data = api.identity(val, 'twitter')
+        data = api.identity(str(val), 'twitter')
         user_id = data['id']
         data = api.score(user_id)
 
-        return data[score]
+        return data['score']
 
 fr = FunctionRegistry()
 fr.register("influence", FunctionInformation(Influence.factory, Influence.return_type))
-
-runner = QueryRunner()
-runner.run_query("SELECT influence(screen_name) AS influence FROM twitter_sample;", False)

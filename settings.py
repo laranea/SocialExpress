@@ -1,3 +1,6 @@
+"""
+TweeQL Settings file
+"""
 # Twitter authentication information
 TWITTER_USERNAME = "laranea"
 TWITTER_PASSWORD = "elleke77"
