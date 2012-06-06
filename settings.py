@@ -2,6 +2,12 @@
 TweeQL Settings file
 """
 # Twitter authentication information
+import sys
+import djcelery
+djcelery.setup_loader()
+
+BROKER_URL = "amqp://guest:guest@localhost:5672/"
+
 TWITTER_USERNAME = "laranea"
 TWITTER_PASSWORD = "elleke77"
 
